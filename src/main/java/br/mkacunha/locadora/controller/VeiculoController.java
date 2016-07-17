@@ -9,7 +9,7 @@ import br.mkacunha.locadora.service.AbstractGenericService;
 import br.mkacunha.locadora.service.VeiculoService;
 
 @RestController
-@RequestMapping("/veiculo")
+@RequestMapping("/v1/veiculos")
 public class VeiculoController extends AbstractGenericController<Veiculo, Long> {
 
 	@Autowired

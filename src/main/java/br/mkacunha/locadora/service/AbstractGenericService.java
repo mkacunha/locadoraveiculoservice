@@ -11,6 +11,8 @@ public abstract class AbstractGenericService<T, ID extends Serializable> {
 
 	public abstract PagingAndSortingRepository<T, ID> getRepository();
 
+	public abstract T update(ID id, T s);
+
 	public void delete(ID id) {
 		getRepository().delete(id);
 	}
@@ -32,7 +34,7 @@ public abstract class AbstractGenericService<T, ID extends Serializable> {
 		return getRepository().findOne(id);
 	}
 
-	public <S extends T> S save(S s) {
+	public T save(T s) {
 		return getRepository().save(s);
 	}
 
